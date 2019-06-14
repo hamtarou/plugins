@@ -114,7 +114,7 @@ class FirebaseMessaging {
     await _channel.invokeMethod<void>('setAutoInitEnabled', enabled);
   }
 
-  Future<dynamic> _handleMethod(MethodCall call) async {
+  Future<dynamic> _handleMethod(MethodCall call)  {
     switch (call.method) {
       case "onToken":
         final String token = call.arguments;
